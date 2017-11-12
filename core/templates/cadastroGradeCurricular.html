@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %} Cadastro Grade Curricular {% endblock %}
+{% block cssLink %}formulario.css{% endblock %}
+
+{% block content %}
+
+<section class="container">
+        <div class="titulo espaco">
+                <h1>Grade Curricular</h1>
+            </div>
+            <article class="formularioPai">
+                <article class="formularioFlho">
+                    <form action="cadastroGradeCurricular.html" method="POST">
+                    <!-- 
+                        **Ideia para pegar do banco de dados
+
+                        <label for="Curso">Escolha o curso: </label><br/>
+                        <select class="entrada espaco" required name="Curso">
+                            {%for sigla, nome in context%}
+                                <option value="sigla"> {{sigla}} - {{nome}} </option>
+                            {% endfor %}
+                        
+                        </select><br/><br/>
+                    -->
+                    
+                    <label for="siglaCurso">Sigla do Curso: </label><br/>
+                    <input name="siglaCurso" type="text" id="siglaCurso" class="entrada espaco" required placeholder="Sigla Curso" /><br/>
+    
+                    <label for="anoGrade">Ano: </label><br/>
+                    <input name="anoGrade" type="number" id="anoGrade" class="entrada espaco" required placeholder="Ano do curso" /><br/>
+    
+                    <label for="semestreGrade">Semestre: </label><br/>
+                    <input name="semestreGrade" type="number" id="semestreGrade" class="entrada espaco" required placeholder="semestre" /><br/>
+    
+                    <button type="submit" value="Enviar">Enviar</button>
+                    <button  type="reset" value="Limpar">Limpar</button>
+                    </form>
+                </article>
+            </article>
+</section>
+{% endblock%}

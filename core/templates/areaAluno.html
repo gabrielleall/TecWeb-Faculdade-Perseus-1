@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} Area do Aluno {% endblock %}
+{% block cssLink %}areaAluno.css{% endblock %}
+
+{% block content %}
+
+<section class="loginPai">
+    <article class="loginFilho">
+        <p>Olá Usuario <button>Area do Aluno</button><button>Sair</button></p>
+    </article>
+</section>
+
+<section class="areaAlunoPai">
+    <article class="areaAlunoFilho">
+        <div class="acessoRapido">
+            <h2>Acesso Rapido</h2>
+            <nav>
+                <li><a href="">Secretaria</a></li>
+                <li><a href="">Teste Online</a></li>
+                <li><a href="">Contato Professor</a></li>
+                <li><a href="">Smart Class</a></li>
+            </nav>
+        </div>
+        <div class="mural">
+            <h2>Mural</h2>
+            <br>
+            <div class="post">
+                <h3>Titulo</h3>
+                <p>Descrição</p>
+            </div>
+            <div class="post">
+                <h3>Titulo</h3>
+                <p>Descrição</p>
+            </div>
+            <div class="post">
+                <h3>Titulo</h3>
+                <p>Descrição</p>
+            </div>
+        </div>
+    </article>
+</section>
+
+{% endblock %}

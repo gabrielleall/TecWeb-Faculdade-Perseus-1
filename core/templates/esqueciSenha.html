@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Esqueci minha Senha{% endblock %}
+{% block cssLink %}formulario.css{% endblock %}
+
+{% block content %}
+    <section class="container">
+        <div class="titulo espaco">
+            <h1>Esqueci minha Senha</h1>
+        </div>
+        <section class="formularioPai">
+            <div class="formularioFlho">
+                <form action="" method="POST">
+                    <label for="email">E-mail</label><br/>
+                    <input type="email" name="email" id="email" class="entrada espaco" placeholder="E-mail" /><br/>
+                    <label for="novaSenha">Nova Senha</label><br/>
+                    <input type="password" name="Nova Senha" id="novaSenha" class="entrada espaco" placeholder="Nova Senha" /><br/>
+                    <label for="confirmarSenha">Confirmar Senha</label><br/>
+                    <input type="password" name="confirmar Senha" id="confirmarSenha" class="entrada espaco" placeholder="confirmar Senha" /><br/>
+                    <button type="submit" value="Enviar">Enviar</button>
+                    <button type="reset" value="Limpar">Limpar</button>
+                </form>
+            </div>
+        </section>
+    </section>
+{% endblock %}

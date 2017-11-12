@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block cssLink %}home.css{% endblock %}
+
+{% block content %}
+    <section class="carrosel">
+    </section>
+
+    <section class="eventoPai">
+        <h1>Eventos</h1>
+        <article class="eventoFilho">
+            <div>
+                <img src="/static/img/evento.jpg" alt="evento" />
+                <h3>Lean Coffee #64</h3>
+                <p>Participe desse encontro e conheça mais sobre agilidade e Gestão de Desenvolvimento de software, Lean, café e pão de queijo!!</p>
+                <button>Saiba mais</button>
+            </div>
+            <div>
+                <img src="/static/img/evento.jpg" alt="evento" />
+                <h3>.NET Conf São Paulo</h3>
+                <p>Aprenda a analisar, projetar, instalar e administrar soluções para sistemas eficientes e seguros em projetos de redes locais
+                e de longa distância.</p>
+                <button>Saiba mais</button>
+            </div>
+            <div>
+                <img src="/static/img/evento.jpg" alt="evento" />
+                <h3>12º Encontro de Direito Digital</h3>
+                <p>Prepare-se para ser um profissional completo na administração de infraestrutura física e lógica de ambientes informatizados</p>
+                <button>Saiba mais</button>
+            </div>
+        </article>
+    </section>
+{% endblock %}

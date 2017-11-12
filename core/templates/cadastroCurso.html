@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} Cadastro Curso {% endblock %}
+{% block cssLink %}formulario.css{% endblock %}
+
+{% block content %}
+    
+    <section class="container">
+               
+        <div class="titulo espaco">
+            <h1>Novo Curso</h1>
+        </div>
+        <article class="formularioPai">
+            <article class="formularioFlho">
+                <form action="cadastroCurso.html" method="POST">
+                
+                <label for="siglaNovoCurso">Sigla do Curso: </label><br/>
+                <input name="siglaNovoCurso" type="text" id="siglaNovoCurso" class="entrada espaco" required placeholder="Sigla Curso" /><br/>
+
+                <label for="nomeNovoCurso">Nome do Curso: </label><br/>
+                <input name="nomeNovoCurso" type="text" id="nomeNovoCurso" class="entrada espaco" required placeholder="Nome Curso" /><br/>
+
+                <button type="submit" value="Enviar">Enviar</button>
+                <button  type="reset" value="Limpar">Limpar</button>
+                </form>
+            </article>
+        </article>
+        <!-- -->
+
+{% endblock%}

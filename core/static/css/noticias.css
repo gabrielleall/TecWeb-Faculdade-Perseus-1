@@ -1,0 +1,44 @@
+.slide {
+    background-image: url(../img/noticias.jpg);
+}
+
+.noticiasPai {
+    width: 100%;
+}
+
+.noticiasFilho {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.noticiasFilho div img {
+    width: 350px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.noticiasFilho div p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.noticiasFilho div button {
+    width: 75px;
+}
+
+    @media screen and (max-width: 1170px)
+    {
+        .noticiasFilho {
+            width: 100%;
+            grid-template-columns: 50% 50%;
+        }
+    }
+    @media screen and (max-width: 720px)
+    {
+        .noticiasFilho {
+            grid-template-columns: 100%;
+        }
+    }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> {% block title %}{% endblock %} | Faculdade Impacta</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/{% block cssLink %}{% endblock %}" />
+</head>
+<body>
+
+    <header class="headerPai">
+        <section class="headerFilho">
+            <div class="logo">
+                <img src="../static/img/logo_perseus_orange.png" alt="Logo Perseus" />
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="../">Home</a></li>
+                    <li><a href="/curso">Cursos</a></li>
+                    <li><a href="/noticias">Noticias</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2017 Faculdade Perseus. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

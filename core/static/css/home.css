@@ -1,0 +1,55 @@
+.carrosel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/slide1.png);
+    height: 520px;
+}
+
+.eventoPai h1 {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.eventoFilho {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.eventoFilho div img {
+    width: 350px;
+}
+
+.eventoFilho h3 {
+    padding-top: 10px;
+}
+
+.eventoFilho p {
+    padding: 10px 0;
+}
+
+.eventoFilho button {
+    width: 80px;
+}
+
+    @media screen and (max-width: 1170px)
+    {
+        .eventoFilho {
+            width: 100%;
+            grid-template-columns: 50% 50%;
+        }
+
+        .eventoFilho button {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media screen and (max-width: 720px)
+    {
+        .eventoFilho {
+            grid-template-columns: 100%;
+        }
+    }

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %} Contato {% endblock %}
+{% block cssLink %}formulario.css{% endblock %}
+
+{% block content %}
+    <section class="container">
+        <div class="titulo espaco">
+            <h1>Mensagem de Contato</h1>
+        </div>
+        <article class="formularioPai">
+            <article class="formularioFlho">
+                <form action="Contato" method="POST">
+                    <label for="assunto">Assunto<span class="obrigatorio">*</span></label><br>
+                    <select class="entrada espaco" name="assunto" id="assunto" class="FormSelect">
+                        <option>Atendimento ao cliente</option>
+                        <option>Secretaria de Graduação</option>
+                        <option>Financeiro</option>
+                        <option>Ouvidoria</option>
+                    </select><br>
+                    
+                    <label for="nome">Nome <span class="obrigatorio">*</span></label><br>
+                    <input class="entrada espaco"  type="text" name="nome" placeholder="Seu nome" id="nome" class="textbox"><br>
+                    
+                    <label for="email">Email <span class="obrigatorio">*</span></label><br>
+                    <input  class="entrada espaco" type="email" name="email" placeholder="ex seu-email@perseus.com.br" id="email" class="textbox"><br>
+                    
+                    <label for="celular">Celular <span class="obrigatorio">*</span></label><br>
+                    <input  class="entrada espaco"  type="text" id="celular" name="celular" min="11" max="12" placeholder="ex: 011987654321"><br>
+                    
+                    <label for="mensagem">Mensagem<span class="obrigatorio">*</span></label><br>
+                    <textarea  class="entrada espaco" name="mensagem" id="mensagem"></textarea>
+
+                    <button type="submit" value="Enviar">Enviar</button>
+                    <button type="reset" value="Limpar">Limpar</button>
+                </form>
+            </article>
+        </article>
+    </section>
+{% endblock%}
