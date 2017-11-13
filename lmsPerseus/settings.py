@@ -76,14 +76,8 @@ WSGI_APPLICATION = 'lmsPerseus.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'faculdade-perseus',
-        'USER': 'perseus@faculdade-perseus',
-        'PASSWORD': 'Faculdade123',
-        'HOST': 'faculdade-perseus.database.windows.net',
-        'PORT': '1433',
-        'OPTIONS': {'drivers': 'SQL Server Native Client 11.0', 'MARS_Connection': 'True',
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
