@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.hashers import make_password
 
 # Create your models here.
 
@@ -9,7 +10,8 @@ class UsuarioManager(BaseUserManager):
         if not ra:
             raise ValueError('RA precisa ser preenchido')
         user = self.model(ra=ra, **extra_fields)
-        user.set_password(password)
+        user.password = make_password(password)
+        #user.set_password(password)
         user.save(using=self._db)
         return user
     def create_user(self, ra, password=None, **extra_fields):
@@ -25,8 +27,7 @@ class Usuario(models.Model):
     email = models.EmailField()
     perfil = models.CharField(max_length=1, default='C')
     ativo = models.BooleanField(default=True)
-    is_anonymous = models.BooleanField()
-    is_authenticated = models.BooleanField()
+    
 
     USERNAME_FIELD = 'ra'
     REQUIRED_FIELDS = ['nome']
