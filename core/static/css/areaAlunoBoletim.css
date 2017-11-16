@@ -1,0 +1,29 @@
+.boletim {
+    margin: 20px 20px;
+}
+
+.boletim h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.boletim h2 {
+    margin: 10px 0;
+}
+
+.tabelaBoletim {
+    width: 80%;
+}
+
+.tabelaBoletim th {
+    color: #ff8c00;
+}
+
+td {
+    color: #fff;
+}
+
+.tabelaBoletim td, th {
+    border: 1px solid #ff8c00;
+    padding: 10px 5px;
+}
