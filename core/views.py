@@ -37,3 +37,6 @@ def area_aluno(request):
 
 def area_aluno_boletim(request):
     return render(request, "areaAlunoBoletim.html")
+
+def area_aluno_contato_professor(request):
+    return render(request, "areaAlunoContatoProfessor.html")

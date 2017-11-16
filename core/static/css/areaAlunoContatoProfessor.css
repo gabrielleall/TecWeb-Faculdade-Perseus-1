@@ -1,0 +1,25 @@
+.contatoProfessor {
+    margin: 20px 20px;
+}
+
+.contatoProfessor h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.tabelaProfessores {
+    width: 80%;
+}
+
+.tabelaProfessores th {
+    color: #ff8c00;
+}
+
+td {
+    color: #fff;
+}
+
+.tabelaProfessores td, th {
+    border: 1px solid #ff8c00;
+    padding: 10px 5px;
+}
