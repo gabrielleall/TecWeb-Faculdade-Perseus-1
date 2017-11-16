@@ -1,51 +1,19 @@
-button {
-    width: 100px;
-    margin-left: 10px;
+.mural {
+    margin: 20px 20px;
 }
 
-.areaAlunoPai, .loginPai {
-    width: 100%;
-    margin-top: 30px;
+.mural h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
-.areaAlunoFilho, .loginFilho {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 1170px;
-    margin: 0 auto;
+.postMural {
+    width: 80%;
+    background-color: #3d3d3d;
+    padding: 10px 10px;    
 }
 
-.acessoRapido li {
-    padding: 10px 0;
-    list-style: none;
+.postTitulo {
+    color: #ff8c00;
+    margin-bottom: 10px;
 }
-
-.acessoRapido a {
-    text-decoration: none;
-}
-.mural h3 {
-    padding: 5px 5px;
-}
-.mural p {
-    margin-bottom: 15px;
-    padding: 3px 5px;
-}
-
-.post {
-    width: 100%;
-    background-color: #444444;
-}
-
-    @media screen and (max-width: 1170px)
-    {
-        .areaAlunoFilho, .loginFilho {
-            width: 100%;
-            grid-template-columns: 50% 50%;
-        }
-    }
-    @media screen and (max-width: 720px)
-    {
-        .areaAlunoFilho, .loginFilho {
-            grid-template-columns: 100%;
-        }
-    }

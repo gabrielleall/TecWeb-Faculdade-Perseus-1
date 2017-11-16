@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block tituloArea %}{% endblock %} | Area do Aluno</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/baseArea.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/{% block cssArea %}{% endblock %}" />
+</head>
+<body>
+
+    <section class="container">
+        <article class="acessoRapido">
+            <img src="../static/img/logo_perseus_orange.png" alt="logo perseus" />
+            <h2>ACESSO RAPIDO</h2>
+            <nav>
+                <ul>
+                    <li><a href="/areaAluno">DASHBOARD</a></li>
+                    <li><a href="/boletim">BOLETIM</a></li>
+                    <li><a href="/testeOnline">TESTE ONLINE</a></li>
+                    <li><a href="/contatoProfessor">CONTATO PROFESSOR</a></li>
+                    <li><a href="/smartClass">SMART CLASS</a></li>
+                </ul>
+            </nav>
+        </article>
+        <article class="conteudo">
+            <div class="logado">
+                <button class="esquerdo">Sair</button>
+                <p class="esquerdo">Usuario</p>
+                <img class="esquerdo" src="../static/img/engS.png" alt="icon usuario" />
+            </div>
+            <main>
+                {% block contentArea %}
+                {% endblock %}
+            </main>
+        </article>
+    </section>
+
+</body>
+</html>
