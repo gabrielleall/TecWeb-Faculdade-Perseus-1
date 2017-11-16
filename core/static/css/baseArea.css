@@ -8,12 +8,12 @@ body {
     background-color: #212121;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, th {
     font-family: 'Arimo', sans-serif;
     color: #ff8c00;
 }
 
-p, a {
+p, a, td {
     font-family: 'Questrial', sans-serif;
     color: #fff;
 }

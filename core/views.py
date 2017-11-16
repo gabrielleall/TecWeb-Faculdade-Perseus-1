@@ -34,3 +34,6 @@ def esqueci_senha(request):
 
 def area_aluno(request):
     return render(request, "areaAluno.html")
+
+def area_aluno_boletim(request):
+    return render(request, "areaAlunoBoletim.html")
