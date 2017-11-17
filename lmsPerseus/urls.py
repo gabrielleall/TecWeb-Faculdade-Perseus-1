@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from core.views import index, curso, noticias, login, cadastro_contato, cadastro_usuario, cadastro_disciplina, cadastro_curso, cadastro_grade_curricular, esqueci_senha, area_aluno, area_aluno_boletim, area_aluno_contato_professor
+from core.views import index, curso, noticias, login, cadastro_contato, cadastro_usuario, cadastro_disciplina, cadastro_curso, cadastro_grade_curricular, esqueci_senha, area_aluno, area_aluno_boletim, area_aluno_contato_professor, area_aluno_smart_class1, area_aluno_smart_class2
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -32,4 +32,6 @@ urlpatterns = [
     url(r'^areaAluno/', area_aluno),
     url(r'^areaAlunoBoletim/', area_aluno_boletim),
     url(r'^areaAlunoContatoProfessor/', area_aluno_contato_professor),
+    url(r'^areaAlunoSmartClass1/', area_aluno_smart_class1),
+    url(r'^areaAlunoSmartClass2/', area_aluno_smart_class2),
 ]

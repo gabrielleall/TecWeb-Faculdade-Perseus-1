@@ -40,3 +40,9 @@ def area_aluno_boletim(request):
 
 def area_aluno_contato_professor(request):
     return render(request, "areaAlunoContatoProfessor.html")
+
+def area_aluno_smart_class1(request):
+    return render(request, "areaAlunoSmartClass1.html")
+
+def area_aluno_smart_class2(request):
+    return render(request, "areaAlunoSmartClass2.html")

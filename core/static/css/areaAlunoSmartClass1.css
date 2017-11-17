@@ -1,0 +1,28 @@
+.disciplinas {
+    margin: 20px 20px;
+}
+
+.disciplinas h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.disciplina {
+    width: 80%;
+    padding: 10px 10px;
+    margin: 20px 0;
+    border: 1px solid #ff8c00;
+}
+
+.disciplina span {
+    float: right;
+}
+
+.disciplina a {
+    text-decoration: none;
+}
+
+.disciplina a:hover {
+    transition: .5s ease;
+    color: #ff8c00;
+}
