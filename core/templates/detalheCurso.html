@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Nome do Curso{% endblock %}
+{% block cssLink %}detalheCurso.css{% endblock %}
+
+{% block content %}
+    <section class="slide">
+        <p>Novo do Curso</p>
+    </section>
+
+    <section class="container">
+        <article class="sobreCurso">
+            <h1>Sobre o Curso</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem. Curabitur ligula magna, semper at tempor eget, hendrerit sit amet sapien. Aliquam sit amet urna hendrerit, accumsan dui sit amet, dictum tortor. Maecenas vitae dolor vestibulum tellus ornare interdum. Aenean ut felis in odio accumsan aliquet vitae a est. Fusce sodales tincidunt lacus, ut faucibus libero porttitor vel.</p>        
+            <p>Duis ac lacinia quam. Praesent finibus ligula dolor, ut porttitor tortor pharetra ullamcorper. Cras a est efficitur, vestibulum libero sit amet, viverra ante. Aliquam ultricies porta lectus at consequat. Etiam dignissim nunc velit, nec sagittis justo tincidunt sed. Cras rutrum ultrices imperdiet. Integer euismod eu ante sit amet porta. Etiam pretium orci vitae urna interdum volutpat. Proin sem nisi, accumsan ac accumsan in, dictum id lectus. Nulla facilisi. Nunc lacinia placerat arcu, pulvinar sodales sapien fermentum porta. Cras maximus cursus justo, nec rutrum turpis rutrum auctor. Ut eget interdum risus, eget dapibus erat. Aenean luctus, erat vitae ornare viverra, risus lectus interdum ligula, id pharetra nibh lorem sed ex. Donec placerat nibh et eros tristique luctus.</p>
+            <div class="horarioCalendario">
+                <div class="horario">
+                    <img src="../static/img/relogioIcon.png" alt="icon horario" />
+                    <p><strong>Periodo:</strong><br />
+                    Noturno</p>
+                </div>
+                <div class="calendario">
+                    <img src="../static/img/calendarioIcon.png" alt="icon calendario" />
+                    <p><strong>Tempo:</strong><br />
+                    4 Semestre</p>
+                </div>
+            </div>
+        </article>
+        <article class="gradeCurso">
+            <h1>Grade do Curso</h1>
+            <button onclick="myFunction1()" class="semestre">1º Semestre</button>
+            <div class="disciplina" id="disciplina1">
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+            </div>
+            <button onclick="myFunction2()" class="semestre">2º Semestre</button>
+            <div class="disciplina" id="disciplina2">
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+            </div>
+            <button onclick="myFunction3()" class="semestre">3º Semestre</button>
+            <div class="disciplina" id="disciplina3">
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+            </div>
+        </article>
+    </section>
+
+
+{% endblock %}

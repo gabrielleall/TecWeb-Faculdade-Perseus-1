@@ -8,6 +8,9 @@ def index(request):
 def curso(request):
     return render(request, "listaCursos.html")
 
+def detalhe_curso(request):
+    return render(request, "detalheCurso.html")
+
 def noticias(request):
     return render(request, "noticias.html")
 

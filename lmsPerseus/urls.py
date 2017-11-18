@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from core.views import index, curso, noticias, login, cadastro_contato, cadastro_usuario, cadastro_disciplina, cadastro_curso, cadastro_grade_curricular, esqueci_senha, area_aluno, area_aluno_boletim, area_aluno_contato_professor, area_aluno_smart_class1, area_aluno_smart_class2
+from core.views import index, curso, noticias, login, cadastro_contato, cadastro_usuario, cadastro_disciplina, cadastro_curso, cadastro_grade_curricular, esqueci_senha, area_aluno, area_aluno_boletim, area_aluno_contato_professor, area_aluno_smart_class1, area_aluno_smart_class2, detalhe_curso
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index),
     url(r'^curso/', curso),
     url(r'^noticias/', noticias),
+    url(r'^detalheCurso/', detalhe_curso),
     url(r'^login/', login),
     url(r'^cadastroContato/', cadastro_contato),
     url(r'^cadastroUsuario/', cadastro_usuario),
