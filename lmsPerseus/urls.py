@@ -15,24 +15,36 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from core.views import index, curso, noticias, login, cadastro_contato, cadastro_usuario, cadastro_disciplina, cadastro_curso, cadastro_grade_curricular, esqueci_senha, area_aluno, area_aluno_boletim, area_aluno_contato_professor, area_aluno_smart_class1, area_aluno_smart_class2, detalhe_curso
+from core.views import *
+from django.contrib.auth.views import login, logout
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', index),
-    url(r'^curso/', curso),
+    url(r'^$', index, name = 'home'),
     url(r'^noticias/', noticias),
-    url(r'^detalheCurso/', detalhe_curso),
-    url(r'^login/', login),
     url(r'^cadastroContato/', cadastro_contato),
     url(r'^cadastroUsuario/', cadastro_usuario),
     url(r'^cadastroDisciplina/', cadastro_disciplina),
     url(r'^cadastroCurso/', cadastro_curso),
     url(r'^cadastroGradeCurricular/', cadastro_grade_curricular),
     url(r'^esqueciSenha/', esqueci_senha),
-    url(r'^areaAluno/', area_aluno),
+
+    #Curso
+    url(r'^curso/([A-Z, a-z]+)', curso),
+
+    #Lista Curso
+    url(r'^listacurso/', lista_curso),
+
+    #Login
+    url(r'^entrar/', login, {'template_name':'login.html'}),
+    url(r'^sair/', logout, {'template_name':'index.html'}),
+
+    #Area Aluno
+    url(r'^areaAluno/', area_aluno, name = 'area_aluno'),
     url(r'^areaAlunoBoletim/', area_aluno_boletim),
     url(r'^areaAlunoContatoProfessor/', area_aluno_contato_professor),
     url(r'^areaAlunoSmartClass1/', area_aluno_smart_class1),
     url(r'^areaAlunoSmartClass2/', area_aluno_smart_class2),
+
+
 ]

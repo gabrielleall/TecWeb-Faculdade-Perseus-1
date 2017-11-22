@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Nome do Curso{% endblock %}
+{% block cssLink %}detalheCurso.css{% endblock %}
+
+{% block content %}
+    <section class="slide">
+        <p>{{ curso }}</p>
+    </section>
+    <section class="container">
+        <article class="sobreCurso">
+            <h1>{{ curso }}</h1>
+            <p>{{ curso.descricao_completa }}</p>
+        </article>
+        <article class="gradeCurso">
+            <h1>Grade do Curso</h1>
+            <button onclick="myFunction1()" class="semestre">1º Semestre</button>
+            <div class="disciplina" id="disciplina1">
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+            </div>
+            <button onclick="myFunction2()" class="semestre">2º Semestre</button>
+            <div class="disciplina" id="disciplina2">
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+            </div>
+            <button onclick="myFunction3()" class="semestre">3º Semestre</button>
+            <div class="disciplina" id="disciplina3">
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+                <p><span>Tecnologia Web</span><br/ >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus dui non aliquet condimentum. Suspendisse ac arcu neque. Aenean ut suscipit lorem.</p>
+            </div>
+        </article>
+    </section>
+
+
+{% endblock %}

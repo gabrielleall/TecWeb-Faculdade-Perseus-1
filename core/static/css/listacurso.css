@@ -1,0 +1,28 @@
+.slide {
+    background-image: url(../img/detalheCursoAds.jpg);
+    background-size: cover;
+}
+
+.cursoPai {
+    width: 100%;
+}
+
+.cursoFilho {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cursoFilho div img {
+    width: 350px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.cursoFilho div button {
+    width: 75px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
