@@ -6,7 +6,6 @@
     <title> {% block title %}{% endblock %} | Faculdade Impacta</title>
     <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
     <link rel="stylesheet" type="text/css" href="../static/css/{% block cssLink %}{% endblock %}" />
-    <script type="text/javascript" src="../static/js/script.js"></script>
 </head>
 <body>
 
@@ -18,9 +17,19 @@
             <nav class="menu">
                 <ul>
                     <li><a href="../">Home</a></li>
-                    <li><a href="/curso">Cursos</a></li>
+                    <li><a href="/listacurso">Cursos</a></li>
                     <li><a href="/noticias">Noticias</a></li>
-                    <li><a href="/login">Login</a></li>
+                    {% if not user.is_authenticated %}
+                        <li><a href="/entrar">Login</a></li>
+                    {% else %}
+                        {% if user.perfil == 'A' %}
+                            <li><a href="/areaAluno">{{ user }}</a></li>
+                        {% elif user.perfil == 'P' %}
+                            <li><a href="/areaProfessor">{{ user }}</a></li>
+                        {% endif %}
+                            <li><a href="/sair">Sair</a></li>
+                    {% endif %}
+
                 </ul>
             </nav>
         </section>

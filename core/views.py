@@ -1,15 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required, user_passes_test
+from core.models import Curso
 
 # Create your views here.
 def index(request):
     return render(request, "index.html")
 
-def curso(request):
-    return render(request, "listaCursos.html")
-
-def detalhe_curso(request):
-    return render(request, "detalheCurso.html")
+def lista_curso(request):
+    contexto = {
+        'cursos': Curso.objects.all,
+    }
+    return render(request, "listaCursos.html", contexto)
 
 def noticias(request):
     return render(request, "noticias.html")
@@ -29,12 +31,25 @@ def cadastro_disciplina(request):
 def cadastro_curso(request):
     return render(request, "cadastroCurso.html")
 
+#   Curso
+def curso(request, sigla):
+    contexto = {
+        'curso': Curso.objects.get(sigla = sigla.upper())
+        }
+    return render(request,'curso.html', contexto)
+
 def cadastro_grade_curricular(request):
     return render(request, "cadastroGradeCurricular.html")
 
 def esqueci_senha(request):
     return render(request, "esqueciSenha.html")
 
+
+def checa_aluno(user):
+     return user.perfil == 'A'
+
+@login_required(login_url='/entrar')
+@user_passes_test(checa_aluno, login_url='/?error=acesso', redirect_field_name = None)
 def area_aluno(request):
     return render(request, "areaAluno.html")
 

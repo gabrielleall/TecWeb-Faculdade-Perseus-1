@@ -1,29 +1,22 @@
 {% extends "base.html" %}
 {% block title %}Cursos{% endblock %}
-{% block cssLink %}cursos.css{% endblock %}
+{% block cssLink %}listacurso.css{% endblock %}
 
 {% block content %}
     <section class="slide">
         <p>Cursos</p>
     </section>
-
     <section class="cursoPai">
         <article class="cursoFilho">
+            {% for curso in cursos %}
             <div>
-                <img src="../static/img/evento.jpg" alt="" />
-                <h3>Titulo Curso</h3>
-                <button><a href="/detalheCurso">Saiba mais</a></button>
+                <h1>{{ curso.sigla }}</h1>
+                <h2>{{ curso.nome }}</h2>
+                <p>{{ curso.descricao_basica }}</p>
+                <a href="/curso/{{ curso.sigla }}"><button>Saiba mais</button></a>
             </div>
-            <div>
-                <img src="../static/img/evento.jpg" alt="" />
-                <h3>Titulo Curso</h3>
-                <button><a href="/detalheCurso">Saiba mais</a></button>
-            </div>
-            <div>
-                <img src="../static/img/evento.jpg" alt="" />
-                <h3>Titulo Curso</h3>
-                <button><a href="/detalheCurso">Saiba mais</a></button>
-            </div>
+            {% endfor %}
         </article>
     </section>
 {% endblock %}
+                

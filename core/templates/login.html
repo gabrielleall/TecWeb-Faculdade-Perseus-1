@@ -9,14 +9,9 @@
         </div>
         <section class="formularioPai">
             <div class="formularioFlho">
-                <form action="" method="POST">
-                    <label for="email">E-mail</label><br/>
-                    <input type="email" name="email" id="email" class="entrada espaco" placeholder="E-mail" /><br/>
-                    <label for="senha">Senha</label><br/>
-                    <input type="password" name="senha" id="senha" class="entrada espaco" placeholder="Senha" /><br/>
-                    <input type="checkbox" name="lembrar" id="lembrar" placeholder="lembrar" />
-                    <label for="lembrar">Lembrar de mim</label><br/>
-                    <a href="/esqueciSenha">Esqueci minha senha</a><br/>
+                <form method="POST" action="">
+                    {{ form.as_p }}
+                    {% csrf_token %}
                     <button type="submit" value="Enviar">Enviar</button>
                     <button type="reset" value="Limpar">Limpar</button>
                 </form>
