@@ -1,65 +1,15 @@
-.slide {
-    background-image: url(../img/detalheCursoAds.jpg);
-    background-size: cover;
+.container { 
+    display: flex;
+    flex: 2;
+    justify-content: space-around; 
 }
-
-.container {
-    display: grid;
-    grid-template-columns: 100%;
-    margin: 0 10%;
+.sobreCurso { 
+    width: 40vw;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
-
-.sobreCurso h1, .gradeCurso h1 {
-    margin: 10px 0;
-    font-size: 2.5em;
-    text-align: center;
+.gradeCurso { 
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 40vw;    
 }
-
-.sobreCurso p {
-    margin: 10px 0;
-}
-
-.horarioCalendario {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    text-align: center;
-    margin: 10px 0;
-}
-
-.horario, .calendario {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin: 0 30%;
-}
-
-.horario p, .calendario p {
-    margin: 20px 0;
-}
-
-.gradeCurso {
-    margin: 0 auto;
-}
-
-.gradeCurso button {
-    width: 100%;
-    margin: 10px 0;
-}
-
-.disciplina {
-    width: 100%;
-    background-color: #3d3d3d;
-}
-
-.disciplina span {
-    color: #ff8c00;
-}
-
-.disciplina p {
-    padding: 10px 10px;
-    margin-top: 10px;
-}
-
-#disciplina1, #disciplina2, #disciplina3 {
-    display: none;
-}
-
