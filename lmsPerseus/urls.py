@@ -16,18 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from core.views import *
+from usuario.views import *
+from curriculo.views import *
 from django.contrib.auth.views import login, logout
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name = 'home'),
     url(r'^noticias/', noticias),
-    url(r'^cadastroContato/', cadastro_contato),
-    url(r'^cadastroUsuario/', cadastro_usuario),
-    url(r'^cadastroDisciplina/', cadastro_disciplina),
-    url(r'^cadastroCurso/', cadastro_curso),
-    url(r'^cadastroGradeCurricular/', cadastro_grade_curricular),
-    url(r'^esqueciSenha/', esqueci_senha),
 
     #Curso
     url(r'^curso/([A-Z, a-z]+)', curso),
